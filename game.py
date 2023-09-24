@@ -13,7 +13,8 @@ st.write("You have 3 attempts to guess the secret number.")
 
 while attempts > 0:
     # Add an input field for the user to enter their guess
-    user_guess = st.number_input("Enter your guess:", min_value=1, max_value=100, key=f"guess_{attempts}")
+    input_label = f"Enter your guess (Attempt {attempts}):"
+    user_guess = st.number_input(input_label, min_value=1, max_value=100)
 
     if st.button("Check"):
         attempts -= 1
